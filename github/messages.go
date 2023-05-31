@@ -80,6 +80,8 @@ var (
 		"project":                        "ProjectEvent",
 		"project_card":                   "ProjectCardEvent",
 		"project_column":                 "ProjectColumnEvent",
+		"projects_v2":                    "ProjectsV2Event",
+		"projects_v2_item":               "ProjectsV2ItemEvent",
 		"public":                         "PublicEvent",
 		"pull_request":                   "PullRequestEvent",
 		"pull_request_review":            "PullRequestReviewEvent",

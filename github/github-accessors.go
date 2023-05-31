@@ -13502,6 +13502,366 @@ func (p *ProjectPermissionLevel) GetUser() *User {
 	return p.User
 }
 
+// GetClosedAt returns the ClosedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetClosedAt() Timestamp {
+	if p == nil || p.ClosedAt == nil {
+		return Timestamp{}
+	}
+	return *p.ClosedAt
+}
+
+// GetCreatedAt returns the CreatedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetCreatedAt() Timestamp {
+	if p == nil || p.CreatedAt == nil {
+		return Timestamp{}
+	}
+	return *p.CreatedAt
+}
+
+// GetCreator returns the Creator field.
+func (p *ProjectsV2) GetCreator() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Creator
+}
+
+// GetDeletedAt returns the DeletedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetDeletedAt() Timestamp {
+	if p == nil || p.DeletedAt == nil {
+		return Timestamp{}
+	}
+	return *p.DeletedAt
+}
+
+// GetDeletedBy returns the DeletedBy field.
+func (p *ProjectsV2) GetDeletedBy() *User {
+	if p == nil {
+		return nil
+	}
+	return p.DeletedBy
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetDescription() string {
+	if p == nil || p.Description == nil {
+		return ""
+	}
+	return *p.Description
+}
+
+// GetID returns the ID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetID() int64 {
+	if p == nil || p.ID == nil {
+		return 0
+	}
+	return *p.ID
+}
+
+// GetNodeID returns the NodeID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetNodeID() string {
+	if p == nil || p.NodeID == nil {
+		return ""
+	}
+	return *p.NodeID
+}
+
+// GetNumber returns the Number field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetNumber() int {
+	if p == nil || p.Number == nil {
+		return 0
+	}
+	return *p.Number
+}
+
+// GetOwner returns the Owner field.
+func (p *ProjectsV2) GetOwner() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Owner
+}
+
+// GetPublic returns the Public field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetPublic() bool {
+	if p == nil || p.Public == nil {
+		return false
+	}
+	return *p.Public
+}
+
+// GetShortDescription returns the ShortDescription field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetShortDescription() string {
+	if p == nil || p.ShortDescription == nil {
+		return ""
+	}
+	return *p.ShortDescription
+}
+
+// GetTitle returns the Title field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetTitle() string {
+	if p == nil || p.Title == nil {
+		return ""
+	}
+	return *p.Title
+}
+
+// GetUpdatedAt returns the UpdatedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2) GetUpdatedAt() Timestamp {
+	if p == nil || p.UpdatedAt == nil {
+		return Timestamp{}
+	}
+	return *p.UpdatedAt
+}
+
+// GetFrom returns the From field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2BoolChange) GetFrom() bool {
+	if p == nil || p.From == nil {
+		return false
+	}
+	return *p.From
+}
+
+// GetTo returns the To field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2BoolChange) GetTo() bool {
+	if p == nil || p.To == nil {
+		return false
+	}
+	return *p.To
+}
+
+// GetDescription returns the Description field.
+func (p *ProjectsV2Change) GetDescription() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.Description
+}
+
+// GetPublic returns the Public field.
+func (p *ProjectsV2Change) GetPublic() *ProjectsV2BoolChange {
+	if p == nil {
+		return nil
+	}
+	return p.Public
+}
+
+// GetShortDescription returns the ShortDescription field.
+func (p *ProjectsV2Change) GetShortDescription() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.ShortDescription
+}
+
+// GetTitle returns the Title field.
+func (p *ProjectsV2Change) GetTitle() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.Title
+}
+
+// GetAction returns the Action field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Event) GetAction() string {
+	if p == nil || p.Action == nil {
+		return ""
+	}
+	return *p.Action
+}
+
+// GetChanges returns the Changes field.
+func (p *ProjectsV2Event) GetChanges() *ProjectsV2Change {
+	if p == nil {
+		return nil
+	}
+	return p.Changes
+}
+
+// GetOrg returns the Org field.
+func (p *ProjectsV2Event) GetOrg() *Organization {
+	if p == nil {
+		return nil
+	}
+	return p.Org
+}
+
+// GetProject returns the Project field.
+func (p *ProjectsV2Event) GetProject() *ProjectsV2 {
+	if p == nil {
+		return nil
+	}
+	return p.Project
+}
+
+// GetSender returns the Sender field.
+func (p *ProjectsV2Event) GetSender() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Sender
+}
+
+// GetArchivedAt returns the ArchivedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetArchivedAt() Timestamp {
+	if p == nil || p.ArchivedAt == nil {
+		return Timestamp{}
+	}
+	return *p.ArchivedAt
+}
+
+// GetContentNodeID returns the ContentNodeID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetContentNodeID() string {
+	if p == nil || p.ContentNodeID == nil {
+		return ""
+	}
+	return *p.ContentNodeID
+}
+
+// GetContentType returns the ContentType field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetContentType() string {
+	if p == nil || p.ContentType == nil {
+		return ""
+	}
+	return *p.ContentType
+}
+
+// GetCreatedAt returns the CreatedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetCreatedAt() Timestamp {
+	if p == nil || p.CreatedAt == nil {
+		return Timestamp{}
+	}
+	return *p.CreatedAt
+}
+
+// GetCreator returns the Creator field.
+func (p *ProjectsV2Item) GetCreator() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Creator
+}
+
+// GetID returns the ID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetID() int64 {
+	if p == nil || p.ID == nil {
+		return 0
+	}
+	return *p.ID
+}
+
+// GetNodeID returns the NodeID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetNodeID() string {
+	if p == nil || p.NodeID == nil {
+		return ""
+	}
+	return *p.NodeID
+}
+
+// GetProjectNodeID returns the ProjectNodeID field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetProjectNodeID() string {
+	if p == nil || p.ProjectNodeID == nil {
+		return ""
+	}
+	return *p.ProjectNodeID
+}
+
+// GetUpdatedAt returns the UpdatedAt field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2Item) GetUpdatedAt() Timestamp {
+	if p == nil || p.UpdatedAt == nil {
+		return Timestamp{}
+	}
+	return *p.UpdatedAt
+}
+
+// GetArchivedAt returns the ArchivedAt field.
+func (p *ProjectsV2ItemChange) GetArchivedAt() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.ArchivedAt
+}
+
+// GetContentType returns the ContentType field.
+func (p *ProjectsV2ItemChange) GetContentType() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.ContentType
+}
+
+// GetPreviousProjectsV2ItemNodeId returns the PreviousProjectsV2ItemNodeId field.
+func (p *ProjectsV2ItemChange) GetPreviousProjectsV2ItemNodeId() *ProjectsV2StringChange {
+	if p == nil {
+		return nil
+	}
+	return p.PreviousProjectsV2ItemNodeId
+}
+
+// GetAction returns the Action field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2ItemEvent) GetAction() string {
+	if p == nil || p.Action == nil {
+		return ""
+	}
+	return *p.Action
+}
+
+// GetChanges returns the Changes field.
+func (p *ProjectsV2ItemEvent) GetChanges() *ProjectsV2ItemChange {
+	if p == nil {
+		return nil
+	}
+	return p.Changes
+}
+
+// GetInstallation returns the Installation field.
+func (p *ProjectsV2ItemEvent) GetInstallation() *Installation {
+	if p == nil {
+		return nil
+	}
+	return p.Installation
+}
+
+// GetOrg returns the Org field.
+func (p *ProjectsV2ItemEvent) GetOrg() *Organization {
+	if p == nil {
+		return nil
+	}
+	return p.Org
+}
+
+// GetProjectItem returns the ProjectItem field.
+func (p *ProjectsV2ItemEvent) GetProjectItem() *ProjectsV2Item {
+	if p == nil {
+		return nil
+	}
+	return p.ProjectItem
+}
+
+// GetSender returns the Sender field.
+func (p *ProjectsV2ItemEvent) GetSender() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Sender
+}
+
+// GetFrom returns the From field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2StringChange) GetFrom() string {
+	if p == nil || p.From == nil {
+		return ""
+	}
+	return *p.From
+}
+
+// GetTo returns the To field if it's non-nil, zero value otherwise.
+func (p *ProjectsV2StringChange) GetTo() string {
+	if p == nil || p.To == nil {
+		return ""
+	}
+	return *p.To
+}
+
 // GetAllowDeletions returns the AllowDeletions field.
 func (p *Protection) GetAllowDeletions() *AllowDeletions {
 	if p == nil {

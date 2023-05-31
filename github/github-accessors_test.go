@@ -15789,6 +15789,396 @@ func TestProjectPermissionLevel_GetUser(tt *testing.T) {
 	p.GetUser()
 }
 
+func TestProjectsV2_GetClosedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2{ClosedAt: &zeroValue}
+	p.GetClosedAt()
+	p = &ProjectsV2{}
+	p.GetClosedAt()
+	p = nil
+	p.GetClosedAt()
+}
+
+func TestProjectsV2_GetCreatedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2{CreatedAt: &zeroValue}
+	p.GetCreatedAt()
+	p = &ProjectsV2{}
+	p.GetCreatedAt()
+	p = nil
+	p.GetCreatedAt()
+}
+
+func TestProjectsV2_GetCreator(tt *testing.T) {
+	p := &ProjectsV2{}
+	p.GetCreator()
+	p = nil
+	p.GetCreator()
+}
+
+func TestProjectsV2_GetDeletedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2{DeletedAt: &zeroValue}
+	p.GetDeletedAt()
+	p = &ProjectsV2{}
+	p.GetDeletedAt()
+	p = nil
+	p.GetDeletedAt()
+}
+
+func TestProjectsV2_GetDeletedBy(tt *testing.T) {
+	p := &ProjectsV2{}
+	p.GetDeletedBy()
+	p = nil
+	p.GetDeletedBy()
+}
+
+func TestProjectsV2_GetDescription(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2{Description: &zeroValue}
+	p.GetDescription()
+	p = &ProjectsV2{}
+	p.GetDescription()
+	p = nil
+	p.GetDescription()
+}
+
+func TestProjectsV2_GetID(tt *testing.T) {
+	var zeroValue int64
+	p := &ProjectsV2{ID: &zeroValue}
+	p.GetID()
+	p = &ProjectsV2{}
+	p.GetID()
+	p = nil
+	p.GetID()
+}
+
+func TestProjectsV2_GetNodeID(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2{NodeID: &zeroValue}
+	p.GetNodeID()
+	p = &ProjectsV2{}
+	p.GetNodeID()
+	p = nil
+	p.GetNodeID()
+}
+
+func TestProjectsV2_GetNumber(tt *testing.T) {
+	var zeroValue int
+	p := &ProjectsV2{Number: &zeroValue}
+	p.GetNumber()
+	p = &ProjectsV2{}
+	p.GetNumber()
+	p = nil
+	p.GetNumber()
+}
+
+func TestProjectsV2_GetOwner(tt *testing.T) {
+	p := &ProjectsV2{}
+	p.GetOwner()
+	p = nil
+	p.GetOwner()
+}
+
+func TestProjectsV2_GetPublic(tt *testing.T) {
+	var zeroValue bool
+	p := &ProjectsV2{Public: &zeroValue}
+	p.GetPublic()
+	p = &ProjectsV2{}
+	p.GetPublic()
+	p = nil
+	p.GetPublic()
+}
+
+func TestProjectsV2_GetShortDescription(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2{ShortDescription: &zeroValue}
+	p.GetShortDescription()
+	p = &ProjectsV2{}
+	p.GetShortDescription()
+	p = nil
+	p.GetShortDescription()
+}
+
+func TestProjectsV2_GetTitle(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2{Title: &zeroValue}
+	p.GetTitle()
+	p = &ProjectsV2{}
+	p.GetTitle()
+	p = nil
+	p.GetTitle()
+}
+
+func TestProjectsV2_GetUpdatedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2{UpdatedAt: &zeroValue}
+	p.GetUpdatedAt()
+	p = &ProjectsV2{}
+	p.GetUpdatedAt()
+	p = nil
+	p.GetUpdatedAt()
+}
+
+func TestProjectsV2BoolChange_GetFrom(tt *testing.T) {
+	var zeroValue bool
+	p := &ProjectsV2BoolChange{From: &zeroValue}
+	p.GetFrom()
+	p = &ProjectsV2BoolChange{}
+	p.GetFrom()
+	p = nil
+	p.GetFrom()
+}
+
+func TestProjectsV2BoolChange_GetTo(tt *testing.T) {
+	var zeroValue bool
+	p := &ProjectsV2BoolChange{To: &zeroValue}
+	p.GetTo()
+	p = &ProjectsV2BoolChange{}
+	p.GetTo()
+	p = nil
+	p.GetTo()
+}
+
+func TestProjectsV2Change_GetDescription(tt *testing.T) {
+	p := &ProjectsV2Change{}
+	p.GetDescription()
+	p = nil
+	p.GetDescription()
+}
+
+func TestProjectsV2Change_GetPublic(tt *testing.T) {
+	p := &ProjectsV2Change{}
+	p.GetPublic()
+	p = nil
+	p.GetPublic()
+}
+
+func TestProjectsV2Change_GetShortDescription(tt *testing.T) {
+	p := &ProjectsV2Change{}
+	p.GetShortDescription()
+	p = nil
+	p.GetShortDescription()
+}
+
+func TestProjectsV2Change_GetTitle(tt *testing.T) {
+	p := &ProjectsV2Change{}
+	p.GetTitle()
+	p = nil
+	p.GetTitle()
+}
+
+func TestProjectsV2Event_GetAction(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2Event{Action: &zeroValue}
+	p.GetAction()
+	p = &ProjectsV2Event{}
+	p.GetAction()
+	p = nil
+	p.GetAction()
+}
+
+func TestProjectsV2Event_GetChanges(tt *testing.T) {
+	p := &ProjectsV2Event{}
+	p.GetChanges()
+	p = nil
+	p.GetChanges()
+}
+
+func TestProjectsV2Event_GetOrg(tt *testing.T) {
+	p := &ProjectsV2Event{}
+	p.GetOrg()
+	p = nil
+	p.GetOrg()
+}
+
+func TestProjectsV2Event_GetProject(tt *testing.T) {
+	p := &ProjectsV2Event{}
+	p.GetProject()
+	p = nil
+	p.GetProject()
+}
+
+func TestProjectsV2Event_GetSender(tt *testing.T) {
+	p := &ProjectsV2Event{}
+	p.GetSender()
+	p = nil
+	p.GetSender()
+}
+
+func TestProjectsV2Item_GetArchivedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2Item{ArchivedAt: &zeroValue}
+	p.GetArchivedAt()
+	p = &ProjectsV2Item{}
+	p.GetArchivedAt()
+	p = nil
+	p.GetArchivedAt()
+}
+
+func TestProjectsV2Item_GetContentNodeID(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2Item{ContentNodeID: &zeroValue}
+	p.GetContentNodeID()
+	p = &ProjectsV2Item{}
+	p.GetContentNodeID()
+	p = nil
+	p.GetContentNodeID()
+}
+
+func TestProjectsV2Item_GetContentType(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2Item{ContentType: &zeroValue}
+	p.GetContentType()
+	p = &ProjectsV2Item{}
+	p.GetContentType()
+	p = nil
+	p.GetContentType()
+}
+
+func TestProjectsV2Item_GetCreatedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2Item{CreatedAt: &zeroValue}
+	p.GetCreatedAt()
+	p = &ProjectsV2Item{}
+	p.GetCreatedAt()
+	p = nil
+	p.GetCreatedAt()
+}
+
+func TestProjectsV2Item_GetCreator(tt *testing.T) {
+	p := &ProjectsV2Item{}
+	p.GetCreator()
+	p = nil
+	p.GetCreator()
+}
+
+func TestProjectsV2Item_GetID(tt *testing.T) {
+	var zeroValue int64
+	p := &ProjectsV2Item{ID: &zeroValue}
+	p.GetID()
+	p = &ProjectsV2Item{}
+	p.GetID()
+	p = nil
+	p.GetID()
+}
+
+func TestProjectsV2Item_GetNodeID(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2Item{NodeID: &zeroValue}
+	p.GetNodeID()
+	p = &ProjectsV2Item{}
+	p.GetNodeID()
+	p = nil
+	p.GetNodeID()
+}
+
+func TestProjectsV2Item_GetProjectNodeID(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2Item{ProjectNodeID: &zeroValue}
+	p.GetProjectNodeID()
+	p = &ProjectsV2Item{}
+	p.GetProjectNodeID()
+	p = nil
+	p.GetProjectNodeID()
+}
+
+func TestProjectsV2Item_GetUpdatedAt(tt *testing.T) {
+	var zeroValue Timestamp
+	p := &ProjectsV2Item{UpdatedAt: &zeroValue}
+	p.GetUpdatedAt()
+	p = &ProjectsV2Item{}
+	p.GetUpdatedAt()
+	p = nil
+	p.GetUpdatedAt()
+}
+
+func TestProjectsV2ItemChange_GetArchivedAt(tt *testing.T) {
+	p := &ProjectsV2ItemChange{}
+	p.GetArchivedAt()
+	p = nil
+	p.GetArchivedAt()
+}
+
+func TestProjectsV2ItemChange_GetContentType(tt *testing.T) {
+	p := &ProjectsV2ItemChange{}
+	p.GetContentType()
+	p = nil
+	p.GetContentType()
+}
+
+func TestProjectsV2ItemChange_GetPreviousProjectsV2ItemNodeId(tt *testing.T) {
+	p := &ProjectsV2ItemChange{}
+	p.GetPreviousProjectsV2ItemNodeId()
+	p = nil
+	p.GetPreviousProjectsV2ItemNodeId()
+}
+
+func TestProjectsV2ItemEvent_GetAction(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2ItemEvent{Action: &zeroValue}
+	p.GetAction()
+	p = &ProjectsV2ItemEvent{}
+	p.GetAction()
+	p = nil
+	p.GetAction()
+}
+
+func TestProjectsV2ItemEvent_GetChanges(tt *testing.T) {
+	p := &ProjectsV2ItemEvent{}
+	p.GetChanges()
+	p = nil
+	p.GetChanges()
+}
+
+func TestProjectsV2ItemEvent_GetInstallation(tt *testing.T) {
+	p := &ProjectsV2ItemEvent{}
+	p.GetInstallation()
+	p = nil
+	p.GetInstallation()
+}
+
+func TestProjectsV2ItemEvent_GetOrg(tt *testing.T) {
+	p := &ProjectsV2ItemEvent{}
+	p.GetOrg()
+	p = nil
+	p.GetOrg()
+}
+
+func TestProjectsV2ItemEvent_GetProjectItem(tt *testing.T) {
+	p := &ProjectsV2ItemEvent{}
+	p.GetProjectItem()
+	p = nil
+	p.GetProjectItem()
+}
+
+func TestProjectsV2ItemEvent_GetSender(tt *testing.T) {
+	p := &ProjectsV2ItemEvent{}
+	p.GetSender()
+	p = nil
+	p.GetSender()
+}
+
+func TestProjectsV2StringChange_GetFrom(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2StringChange{From: &zeroValue}
+	p.GetFrom()
+	p = &ProjectsV2StringChange{}
+	p.GetFrom()
+	p = nil
+	p.GetFrom()
+}
+
+func TestProjectsV2StringChange_GetTo(tt *testing.T) {
+	var zeroValue string
+	p := &ProjectsV2StringChange{To: &zeroValue}
+	p.GetTo()
+	p = &ProjectsV2StringChange{}
+	p.GetTo()
+	p = nil
+	p.GetTo()
+}
+
 func TestProtection_GetAllowDeletions(tt *testing.T) {
 	p := &Protection{}
 	p.GetAllowDeletions()

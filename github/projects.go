@@ -594,3 +594,38 @@ func (s *ProjectsService) ReviewProjectCollaboratorPermission(ctx context.Contex
 	}
 	return ppl, resp, nil
 }
+
+// ProjectsV2 represents a GitHub organization-level Project.
+type ProjectsV2 struct {
+	ID               *int64     `json:"id,omitempty"`
+	Number           *int       `json:"number,omitempty"`
+	NodeID           *string    `json:"node_id,omitempty"`
+	Title            *string    `json:"title,omitempty"`
+	Description      *string    `json:"description,omitempty"`
+	ShortDescription *string    `json:"short_description,omitempty"`
+	Public           *bool      `json:"public,omitempty"`
+	CreatedAt        *Timestamp `json:"created_at,omitempty"`
+	UpdatedAt        *Timestamp `json:"updated_at,omitempty"`
+	ClosedAt         *Timestamp `json:"closed_at,omitempty"`
+	DeletedAt        *Timestamp `json:"deleted_at,omitempty"`
+
+	// The User object that generated the project.
+	Owner     *User `json:"owner,omitempty"`
+	Creator   *User `json:"creator,omitempty"`
+	DeletedBy *User `json:"deleted_by,omitempty"`
+}
+
+// ProjectsV2Item represents item of GitHub organization-level Project.
+type ProjectsV2Item struct {
+	ID            *int64     `json:"id,omitempty"`
+	NodeID        *string    `json:"node_id,omitempty"`
+	ProjectNodeID *string    `json:"project_node_id,omitempty"`
+	ContentNodeID *string    `json:"content_node_id,omitempty"`
+	ContentType   *string    `json:"content_type,omitempty"`
+	CreatedAt     *Timestamp `json:"created_at,omitempty"`
+	UpdatedAt     *Timestamp `json:"updated_at,omitempty"`
+	ArchivedAt    *Timestamp `json:"archived_at,omitempty"`
+
+	// The User object that generated the project.
+	Creator *User `json:"creator,omitempty"`
+}

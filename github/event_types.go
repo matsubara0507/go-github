@@ -437,6 +437,34 @@ type ProjectColumnName struct {
 	From *string `json:"from,omitempty"`
 }
 
+// ProjectsV2Change represents the changes when organization-level project has been edited.
+type ProjectsV2Change struct {
+	Title            *ProjectsV2StringChange `json:"title,omitempty"`
+	Description      *ProjectsV2StringChange `json:"description,omitempty"`
+	ShortDescription *ProjectsV2StringChange `json:"short_description,omitempty"`
+	Public           *ProjectsV2BoolChange   `json:"public,omitempty"`
+}
+
+// ProjectsV2ItemChange represents the changes when item of organization-level project has been edited.
+type ProjectsV2ItemChange struct {
+	ArchivedAt  *ProjectsV2StringChange `json:"archived_at,omitempty"`  // when action is archived or restored
+	ContentType *ProjectsV2StringChange `json:"content_type,omitempty"` // when action is converted
+	// TODO: document is nothing for changes object when action is edited
+	PreviousProjectsV2ItemNodeId *ProjectsV2StringChange `json:"previous_projects_v_2_item_node_id,omitempty"` // when action is reordered
+}
+
+// ProjectsV2StringChange represents the string column changes for organization-level project
+type ProjectsV2StringChange struct {
+	From *string `json:"from,omitempty"`
+	To   *string `json:"to,omitempty"`
+}
+
+// ProjectsV2BoolChange represents the boolean column changes for organization-level project
+type ProjectsV2BoolChange struct {
+	From *bool `json:"from,omitempty"`
+	To   *bool `json:"to,omitempty"`
+}
+
 // TeamChange represents the changes when a team has been edited.
 type TeamChange struct {
 	Description *TeamDescription `json:"description,omitempty"`
@@ -837,6 +865,35 @@ type ProjectColumnEvent struct {
 
 	// The following fields are only populated by Webhook events.
 	Repo         *Repository   `json:"repository,omitempty"`
+	Org          *Organization `json:"organization,omitempty"`
+	Sender       *User         `json:"sender,omitempty"`
+	Installation *Installation `json:"installation,omitempty"`
+}
+
+// ProjectsV2Event is triggered when organization-level project is created, modified or deleted.
+// The webhook event name is "project_v2".
+//
+// GitHub API docs: https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#projects_v2_item
+type ProjectsV2Event struct {
+	Action  *string           `json:"action,omitempty"`
+	Changes *ProjectsV2Change `json:"changes,omitempty"`
+	Project *ProjectsV2       `json:"projects_v2,omitempty"`
+
+	// The following fields are only populated by Webhook events.
+	Org    *Organization `json:"organization,omitempty"`
+	Sender *User         `json:"sender,omitempty"`
+}
+
+// ProjectsV2ItemEvent is triggered when item is created, modified or deleted on organization-level project .
+// The webhook event name is "project_v2".
+//
+// GitHub API docs: https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#projects_v2_item
+type ProjectsV2ItemEvent struct {
+	Action      *string               `json:"action,omitempty"`
+	Changes     *ProjectsV2ItemChange `json:"changes,omitempty"`
+	ProjectItem *ProjectsV2Item       `json:"projects_v2_item,omitempty"`
+
+	// The following fields are only populated by Webhook events.
 	Org          *Organization `json:"organization,omitempty"`
 	Sender       *User         `json:"sender,omitempty"`
 	Installation *Installation `json:"installation,omitempty"`
